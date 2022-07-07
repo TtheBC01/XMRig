@@ -6,7 +6,7 @@
 
 This repository containerizes the XMRig mining software which runs the [RandomX](https://www.getmonero.org/resources/moneropedia/randomx.html) Proof-of-Work algorithm. 
 
-## [Building]()
+## [Building](https://xmrig.com/docs/miner/build/ubuntu)
 
 To build the XMRig image locally:
 
