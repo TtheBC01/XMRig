@@ -1,4 +1,6 @@
+<p align="center">
 <img src="https://xmrig.com/assets/img/xmrig-logo.svg" width="200">
+</p>
 
 # [XMRig](https://xmrig.com/)
 
