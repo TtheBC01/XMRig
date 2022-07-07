@@ -1,8 +1,10 @@
+![XMRig](https://xmrig.com/assets/img/xmrig-logo.svg)
+
 # [XMRig](https://xmrig.com/)
 
 This repository containerizes the XMRig mining software which runs the [RandomX](https://www.getmonero.org/resources/moneropedia/randomx.html) Proof-of-Work algorithm. 
 
-## Building
+## [Building]()
 
 To build the XMRig image locally:
 
@@ -25,5 +27,5 @@ You will need the following information handy to start the container:
 3. A name for your mining rig. 
 
 ```shell
-docker run --env POOL=us-west.minexmr.com --env PORT=443 --env RIG_ID="CYBERSKULL" --env WALLET=4B5wkzK41teKuJhPwhV5zJX3RnZe1SPNHimZmoQBUyMTHCWFJ4kSS61NAs8mtSqfLxhicqy6jAjm7JGTQrjdT5JUFAnSqcm --gpus all tthebc01/xmrig
+docker run -d --rm --env POOL=us-west.minexmr.com --env PORT=443 --env RIG_ID="cyberskull" --env WALLET=4BXXX --gpus all tthebc01/xmrig
 ```
