@@ -1,4 +1,4 @@
-![XMRig](https://xmrig.com/assets/img/xmrig-logo.svg =200x)
+<img src="https://xmrig.com/assets/img/xmrig-logo.svg" width="200">
 
 # [XMRig](https://xmrig.com/)
 
