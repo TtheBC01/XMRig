@@ -14,10 +14,24 @@ To build the XMRig image locally:
 docker build -t xmrig .
 ```
 
-You can pull a pre-built image from `tthebc01/xmrig`
+You can pull a pre-built image from `tthebc01/xmrig` that is based on [`nvidia/cuda:11.4.0-runtime-ubuntu:18.04`](https://hub.docker.com/layers/nvidia/cuda/11.4.0-runtime-ubuntu18.04/images/sha256-4dfdfec42da3308b94d1f9886f3db1593032c2a8a78586f900c5e29ffa496577?context=explore)
 
 ```shell
 docker pull tthebc01/xmrig
+```
+
+### Customizing the CUDA version
+
+If you are going to use your GPU with this image, you will need to make sure the host CUDA version and container CUDA versions match. Check what CUDA release you are using:
+
+```shell
+nvidia-smi
+```
+
+Then build with an appropriate base image using the build-time arg `CUDAVERSION`:
+
+```shell
+docker build -t xmrig --build-arg CUDAVERSION=11.4.0 .
 ```
 
 ## Starting XMRig

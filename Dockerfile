@@ -1,5 +1,8 @@
+# version of the CUDA library to use
+ARG CUDAVERSION=11.4.0
+
 # Build layer
-FROM nvidia/cuda:10.2-devel-ubuntu18.04 as builder
+FROM nvidia/cuda:${CUDAVERSION}-devel-ubuntu18.04 as builder
 
 # install required packages
 RUN apt-get update \
@@ -21,7 +24,7 @@ RUN git clone https://github.com/xmrig/xmrig-cuda.git
 RUN mkdir /xmrig-cuda/build && cd /xmrig-cuda/build && cmake .. -DCUDA_LIB=/usr/local/cuda/lib64/stubs/libcuda.so -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda && make -j4
 
 # Runtime layer
-FROM nvidia/cuda:10.2-runtime-ubuntu18.04
+FROM nvidia/cuda:${CUDAVERSION}-runtime-ubuntu18.04
 
 # Set some defaults
 ENV PATH=/xmrig/build:$PATH
